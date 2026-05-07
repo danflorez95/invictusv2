@@ -5,8 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Cliente;
+use App\Models\Tenant;
 
-class Pagos extends Model
+class Pagos extends TenantModel
 {
     use HasFactory;
     protected $table = 'pagos';

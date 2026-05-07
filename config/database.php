@@ -59,6 +59,17 @@ return [
             ]) : [],
         ],
 
+        'tenant' => [
+            'driver' => 'mysql',
+            'host' => 'db',         // importante (docker)
+            'port' => '3306',
+            'database' => null,     // dinámico
+            'username' => 'user',
+            'password' => 'secret',
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+        ],
+
         'mariadb' => [
             'driver' => 'mariadb',
             'url' => env('DB_URL'),

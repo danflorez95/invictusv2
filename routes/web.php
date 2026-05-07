@@ -69,6 +69,11 @@ Route::get('/pagos', function () {
     return view('finanzas.pagos', compact('pagos'));
 })->name('pagos.index');
 
+
+Route::get('/test-db', function () {
+    return DB::connection('tenant')->getDatabaseName();
+});
+
 Route::post('/pagos', [PagosController::class, 'store']) ->name('pago.store');
 Route::put('/pagos/{id}',       [PagosController::class, 'update'])  ->name('pago.update');
 Route::delete('/pagos/{id}',    [PagosController::class, 'destroy']) ->name('pago.destroy');
